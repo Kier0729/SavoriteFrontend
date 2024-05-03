@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios"
 
 function TaskManager(){
+    axios.defaults.withCredentials = true;
     const [task, setTask] = useState()
     const [newtask, setNewTask] = useState({title:"", status:false});
     const [noInput, setNoInput] = useState(false);
