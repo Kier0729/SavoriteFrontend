@@ -5,7 +5,7 @@ function TaskManager(){
     const [task, setTask] = useState()
     const [newtask, setNewTask] = useState({title:"", status:false});
     const [noInput, setNoInput] = useState(false);
-    const API = "https://savoritebackend.onrender.com";
+    const API = process.env.REACT_APP_API_URL;
     async function fetch(){
         await axios.get(`${API}/fetch`).then(
             res=>{
